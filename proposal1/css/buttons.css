@@ -1,6 +1,9 @@
 /* BUTTONS */
 
 .btn-primary {
+	background-color: #e94870;
+	text-decoration: none;
+	color: white;
 }
 
 .btn-secondary {
