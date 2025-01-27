@@ -1,0 +1,180 @@
+/* BASE LAYOUT FLEXBOX */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #e94870;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100vw;
+}
+
+/*/////////////NAVIGATIE///////*/
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 60px 0;
+	height: 150px;
+	width: 100%;
+}
+
+.nav img {
+	width: 100%;
+	height: auto;
+}
+
+/*////////////TESTIMONIES/////////////*/
+
+.story {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 0 5%;
+}
+/*logo cinemaximiliaan*/
+.story-logo img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 50px;
+}
+
+.story-content {
+	display: flex;
+	flex-direction: row;
+	height: 900px;
+	justify-content: flex-start;
+	background-color: #5bbca9;
+	border-radius: 10px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	width: 70%;
+	margin-bottom: 40px;
+}
+
+.story-img {
+	flex: 1;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.story-img img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+.story-text {
+	flex: 1;
+
+	flex-direction: column;
+	padding: 40px;
+	background-color: #5bbca9;
+	color: white;
+	width: 50%;
+	border-radius: 20px;
+	font-size: 2rem;
+	line-height: 1.8;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.story-content.reverse {
+	flex-direction: row-reverse;
+}
+
+.story-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 70%;
+	margin: 40px auto;
+	gap: 20px;
+}
+.story-col {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #e94870;
+	border-radius: 20px;
+	height: auto;
+	overflow: hidden;
+	padding: 20px;
+	height: 100%;
+}
+.story-col .story-text {
+	color: white;
+	margin: 0;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 1.8;
+	width: 100%;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.story-col .story-img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+.story-col .story-img img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.story-col .story-text {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	line-height: 1.8;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.story-text h1 {
+	margin: 0;
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+.story-text hr {
+	border: none;
+
+	width: 50%;
+	border-top: 2px solid white;
+	margin: 20px auto;
+}
+
+.story-text p {
+	text-align: center;
+	margin: 20px 0;
+	line-height: 2.4;
+	font-size: 2rem;
+}
+
+/*///////////RESPONSIVE DEEL VAN TESTIMONIES////*/
+
+@media (max-width: 768px) {
+	.story-content {
+		flex-direction: column;
+	}
+
+	.story-text {
+		padding: 20px;
+		font-size: 1.2rem;
+	}
+	.story-img img {
+		max-height: 300px;
+		flex: none;
+	}
+}
