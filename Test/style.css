@@ -1,7 +1,9 @@
 body {
 	font-family: Libre Franklin;
-	background-color: #ec5671;
+	background-color: #e94870;
 	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 h1 {
 	font-size: 80px; /* Maak de tekst groter */
@@ -102,7 +104,7 @@ h1::after {
 	height: 100%;
 	backface-visibility: hidden;
 	transform: rotateY(180deg);
-	background-color: #5cc2a4; /* Zorgt ervoor dat de achterkant niet transparant is */
+	background-color: #5bbca9; /* Zorgt ervoor dat de achterkant niet transparant is */
 	display: flex;
 	align-items: center; /* Centreert verticaal */
 	justify-content: center; /* Centreert horizontaal */
@@ -132,7 +134,7 @@ h1::after {
 	font-weight: bold;
 	color: white;
 	text-transform: uppercase;
-	opacity: 0.7; /* Zorgt voor de lichte tekstkleur */
+	opacity: 0.7;
 	margin: 0; /* Verwijder standaardmarges */
 }
 
@@ -140,8 +142,8 @@ h1::after {
 	width: 70px; /* Grootte van de cirkel */
 	height: 70px; /* Grootte van de cirkel */
 	background-color: white;
-	color: #ec5671;
-	font-size: 45px; /* Grootte van de pijl */
+	color: #e94870;
+	font-size: 50px; /* Grootte van de pijl */
 	font-weight: bold;
 	display: flex;
 	align-items: center; /* Centreert de pijl verticaal */
@@ -149,8 +151,31 @@ h1::after {
 	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
 	cursor: pointer;
 	flex-shrink: 0; /* Voorkomt dat de cirkels verkleinen */
-	line-height: 5; /* Zorgt ervoor dat de pijl goed gecentreerd blijft */
+	line-height: 5px; /* Zorgt ervoor dat de pijl niet omhoog of omlaag schuift */
+	text-align: center;
 }
+
 .arrow:hover {
 	background-color: #f28a9c; /* Lichtroze effect bij hover */
+}
+.share-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: white;
+	color: #e94870;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 2px solid white;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+	margin-left: 1500px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.share-button:hover {
+	background-color: #f28a9c;
+	color: white;
+	border-color: #f28a9c;
 }
