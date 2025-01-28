@@ -3,6 +3,26 @@ body {
 	background-color: #ec5671;
 	text-align: center;
 }
+h1 {
+	font-size: 80px; /* Maak de tekst groter */
+	font-weight: 700; /* Maak de tekst dikker */
+	color: white; /* Witte tekstkleur */
+	text-align: center;
+	position: relative; /* Nodig voor de lijn */
+	display: inline-block; /* Zorgt ervoor dat de onderlijn niet over de hele breedte gaat */
+	padding-bottom: 5px; /* Ruimte tussen de tekst en de lijn */
+	margin-top: 100px;
+}
+
+h1::after {
+	content: ""; /* Zorgt dat er een lijn verschijnt */
+	display: block;
+	width: 1000px; /* Breedte van de lijn, pas aan naar wens */
+	height: 5px; /* Dikte van de lijn */
+	background-color: white; /* Witte lijnkleur */
+	margin: 10px auto 0; /* Zorgt ervoor dat de lijn gecentreerd is */
+}
+
 .carousel {
 	display: flex;
 	justify-content: center;
@@ -20,26 +40,29 @@ body {
 }
 .item:hover {
 	transform: scale(1.05);
-	transition: transform 0.2s ease-in-out;
+	transition: transform 0.3s ease-in-out;
 }
 .item.middle {
-	width: 350px; /* Grotere afbeelding in het midden */
-	height: 350px;
+	width: 450px;
+	height: 450px;
 	transition: transform 0.3s ease-in-out;
 }
 .item.side {
-	width: 250px; /* Kleinere zij-afbeeldingen */
-	height: 250px;
+	width: 350px;
+	height: 350px;
+	transition: transform 0.3s ease-in-out;
 }
 .item.side.right {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	margin-left: auto;
+	transition: transform 0.3s ease-in-out;
 }
 .item.side.left {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	margin-right: auto;
+	transition: transform 0.3s ease-in-out;
 }
 .inner {
 	width: 100%;
@@ -55,21 +78,79 @@ body {
 	height: 100%;
 	backface-visibility: hidden;
 	border-radius: 10px;
+	justify-content: center;
+}
+.front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden; /* Voorkant blijft zichtbaar */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .front img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: cover; /* Zorgt ervoor dat de afbeelding goed past */
+	display: block; /* Voorkomt rare witruimte */
 }
+
 .back {
-	background-color: #5cc2a4;
-	color: white;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	background-color: #5cc2a4; /* Zorgt ervoor dat de achterkant niet transparant is */
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	transform: rotateY(180deg);
+	align-items: center; /* Centreert verticaal */
+	justify-content: center; /* Centreert horizontaal */
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box; /* Zorgt dat padding de grootte niet beïnvloedt */
 }
+.back p {
+	max-width: 80%; /* Zorgt ervoor dat de tekst niet te breed wordt */
+	font-size: 18px; /* Maak de tekst leesbaar */
+	color: white; /* Zorg dat de tekst goed contrasteert */
+}
+
 .flipped .inner {
-	transform: rotateY(180deg);
+	transform: rotateY(180deg); /* Draait de kaart om bij klik */
+}
+.photo-instruction {
+	display: flex;
+	align-items: center; /* Centreert de pijlen en tekst verticaal */
+	justify-content: center; /* Zorgt ervoor dat alles in het midden van de pagina blijft */
+	gap: 20px; /* Ruimte tussen de pijlen en de tekst */
+	margin-top: 30px; /* Afstand van de titel */
+}
+
+.photo-instruction p {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	opacity: 0.7; /* Zorgt voor de lichte tekstkleur */
+	margin: 0; /* Verwijder standaardmarges */
+}
+
+.arrow {
+	width: 70px; /* Grootte van de cirkel */
+	height: 70px; /* Grootte van de cirkel */
+	background-color: white;
+	color: #ec5671;
+	font-size: 45px; /* Grootte van de pijl */
+	font-weight: bold;
+	display: flex;
+	align-items: center; /* Centreert de pijl verticaal */
+	justify-content: center; /* Centreert de pijl horizontaal */
+	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
+	cursor: pointer;
+	flex-shrink: 0; /* Voorkomt dat de cirkels verkleinen */
+	line-height: 5; /* Zorgt ervoor dat de pijl goed gecentreerd blijft */
+}
+.arrow:hover {
+	background-color: #f28a9c; /* Lichtroze effect bij hover */
 }
