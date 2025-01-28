@@ -111,6 +111,51 @@ body {
 	font-size: 2rem;
 }
 
+/*////////JOUW VERHAAL FORM//////////////*/
+
+.content-form {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	width: 70%;
+	height: 900px;
+	margin: 40px auto;
+}
+
+form {
+	background: #5bbca9;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-form h1 {
+	font-size: 4rem;
+	color: white;
+	text-align: center;
+}
+
+.label {
+	color: white;
+}
+
+.input-box {
+	border-radius: 15px;
+	color: white;
+	padding: 5px 2px;
+}
+
+.submit {
+	background: #e94870;
+	color: white;
+	border-radius: 30px;
+	padding: 20px 60px;
+	font-family: "libre-franklin", sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	margin-left: 40%;
+}
+
 /*///////////RESPONSIVE DEEL VAN TESTIMONIES////*/
 
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 body {
-	font-family: Libre Frankling;
+	font-family: Libre Franklin;
 	background-color: #ec5671;
 	text-align: center;
 }
@@ -18,9 +18,14 @@ body {
 	border-radius: 10px;
 	overflow: hidden;
 }
+.item:hover {
+	transform: scale(1.05);
+	transition: transform 0.2s ease-in-out;
+}
 .item.middle {
 	width: 350px; /* Grotere afbeelding in het midden */
 	height: 350px;
+	transition: transform 0.3s ease-in-out;
 }
 .item.side {
 	width: 250px; /* Kleinere zij-afbeeldingen */
@@ -29,10 +34,12 @@ body {
 .item.side.right {
 	width: 150px;
 	height: 150px;
+	margin-left: auto;
 }
 .item.side.left {
 	width: 150px;
 	height: 150px;
+	margin-right: auto;
 }
 .inner {
 	width: 100%;
