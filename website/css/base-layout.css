@@ -117,12 +117,31 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	width: 70%;
-	height: 900px;
-	margin: 40px auto;
+	width: 100%;
+	height: 1200px;
+	margin: 40px 0;
+	overflow: hidden;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-form {
+.form-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.form-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.content-form form {
+	flex: 1;
+	justify-content: center;
+	box-sizing: border-box;
 	background: #5bbca9;
 	padding: 20px;
 	display: flex;
@@ -130,9 +149,10 @@ form {
 }
 
 .content-form h1 {
-	font-size: 4rem;
+	font-size: 6rem;
 	color: white;
 	text-align: center;
+	margin-top: 0;
 }
 
 .label {
@@ -148,12 +168,13 @@ form {
 .submit {
 	background: #e94870;
 	color: white;
-	border-radius: 30px;
-	padding: 20px 60px;
+	border-radius: 80px;
+	padding: 40px 120px;
 	font-family: "libre-franklin", sans-serif;
 	font-weight: bold;
-	font-size: 25px;
-	margin-left: 40%;
+	font-size: 50px;
+	margin-top: 10%;
+	margin-left: 36%;
 }
 
 /*///////////RESPONSIVE DEEL VAN TESTIMONIES////*/
