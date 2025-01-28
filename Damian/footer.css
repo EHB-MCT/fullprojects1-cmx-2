@@ -1,18 +1,15 @@
-.footer {
-	text-align: center;
-	font-family: "Libre Franklin", sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
+/* Basis styling */
 .bedankt {
 	background-color: #f8f3aa;
 	padding: 40px 20px;
 	color: #ec5671;
 	width: 100%;
+	text-align: center;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
+/* Tekst */
 .bedankt h1 {
 	font-size: 32px;
 	font-weight: bold;
@@ -25,4 +22,64 @@
 	max-width: 800px;
 	margin: 0 auto;
 	line-height: 1.5;
+	padding: 0 20px;
+}
+
+/* RESPONSIVE AANPASSINGEN */
+@media (max-width: 768px) {
+	.bedankt {
+		padding: 30px 15px;
+	}
+
+	.bedankt h1 {
+		font-size: 26px;
+	}
+
+	.bedankt p {
+		font-size: 14px;
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	.bedankt {
+		padding: 20px 10px;
+	}
+
+	.bedankt h1 {
+		font-size: 22px;
+	}
+
+	.bedankt p {
+		font-size: 13px;
+		max-width: 95%;
+	}
+}
+.sponsors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.sponsors img {
+	max-width: 80%; /* Zorgt ervoor dat de afbeelding niet breder is dan 80% van het scherm */
+	height: auto; /* Behoudt de aspect ratio */
+	max-height: 300px; /* Voorkomt dat de afbeelding te groot wordt op desktops */
+}
+
+/* Responsieve aanpassingen */
+@media (max-width: 768px) {
+	.sponsors img {
+		max-width: 90%; /* Groter maken op kleinere schermen voor betere zichtbaarheid */
+		max-height: 250px;
+	}
+}
+
+@media (max-width: 480px) {
+	.sponsors img {
+		max-width: 95%; /* Nog groter voor mobiele apparaten */
+		max-height: 200px;
+	}
 }
