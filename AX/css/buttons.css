@@ -1,0 +1,17 @@
+/* BUTTONS */
+
+.btn-primary {
+	background-color: #e94870;
+	text-decoration: none;
+	color: white;
+	margin-left: 5px;
+	padding: 10px;
+}
+
+.btn-secondary {
+	margin-left: 5%;
+	background-color: white;
+	color: #e94870;
+	text-decoration: none;
+	padding: 10px;
+}
