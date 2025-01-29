@@ -180,3 +180,17 @@ button:hover {
 .close-btn:hover {
   background: darkred;
 }
+
+#image-container {
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  margin: 10px;
+}
+
+.pagination button {
+  max-width: 25px;
+}
