@@ -1,0 +1,194 @@
+body {
+	font-family: Libre Franklin;
+	background-color: #e94870;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 80px; /* Maak de tekst groter */
+	font-weight: 700; /* Maak de tekst dikker */
+	color: white; /* Witte tekstkleur */
+	text-align: center;
+	position: relative; /* Nodig voor de lijn */
+	display: inline-block; /* Zorgt ervoor dat de onderlijn niet over de hele breedte gaat */
+	padding-bottom: 5px; /* Ruimte tussen de tekst en de lijn */
+	margin-top: 100px;
+}
+
+h1::after {
+	content: ""; /* Zorgt dat er een lijn verschijnt */
+	display: block;
+	width: 1000px; /* Breedte van de lijn, pas aan naar wens */
+	height: 5px; /* Dikte van de lijn */
+	background-color: white; /* Witte lijnkleur */
+	margin: 10px auto 0; /* Zorgt ervoor dat de lijn gecentreerd is */
+}
+
+.carousel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-top: 50px;
+}
+.item {
+	position: relative;
+	cursor: pointer;
+	perspective: 1000px;
+	border: 4px solid white;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.item:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in-out;
+}
+.item.middle {
+	width: 450px;
+	height: 450px;
+	transition: transform 0.3s ease-in-out;
+}
+.item.side {
+	width: 350px;
+	height: 350px;
+	transition: transform 0.3s ease-in-out;
+}
+.item.side.right {
+	width: 250px;
+	height: 250px;
+	margin-left: auto;
+	transition: transform 0.3s ease-in-out;
+}
+.item.side.left {
+	width: 250px;
+	height: 250px;
+	margin-right: auto;
+	transition: transform 0.3s ease-in-out;
+}
+.inner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+}
+.front,
+.back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 10px;
+	justify-content: center;
+}
+.front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden; /* Voorkant blijft zichtbaar */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.front img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Zorgt ervoor dat de afbeelding goed past */
+	display: block; /* Voorkomt rare witruimte */
+}
+.back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	background-color: #5bbca9; /* Zorgt ervoor dat de achterkant niet transparant is */
+	display: flex;
+	align-items: center; /* Centreert verticaal */
+	justify-content: center; /* Centreert horizontaal */
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box; /* Zorgt dat padding de grootte niet beïnvloedt */
+}
+.back p {
+	font-size: 20px; /* Pas deze waarde aan voor grotere tekst */
+	font-weight: bold; /* Maak de tekst vetter als dat beter past */
+	color: white; /* Zorgt voor contrast */
+	max-width: 80%; /* Zorgt dat de tekst niet te breed wordt */
+	text-align: center; /* Zorgt ervoor dat de tekst gecentreerd blijft */
+	line-height: 1.5; /* Voegt wat extra ruimte tussen de regels toe */
+}
+
+.flipped .inner {
+	transform: rotateY(180deg); /* Draait de kaart om bij klik */
+}
+.photo-instruction {
+	display: flex;
+	align-items: center; /* Centreert de pijlen en tekst verticaal */
+	justify-content: center; /* Zorgt ervoor dat alles in het midden van de pagina blijft */
+	gap: 20px; /* Ruimte tussen de pijlen en de tekst */
+	margin-top: 30px; /* Afstand van de titel */
+}
+
+.photo-instruction p {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	opacity: 0.7;
+	margin: 0; /* Verwijder standaardmarges */
+}
+
+.arrow {
+	width: 70px; /* Grootte van de cirkel */
+	height: 70px; /* Grootte van de cirkel */
+	background-color: white;
+	color: #e94870;
+	font-size: 50px; /* Grootte van de pijl */
+	font-weight: bold;
+	display: flex;
+	align-items: center; /* Centreert de pijl verticaal */
+	justify-content: center; /* Centreert de pijl horizontaal */
+	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
+	cursor: pointer;
+	flex-shrink: 0; /* Voorkomt dat de cirkels verkleinen */
+	line-height: 5px; /* Zorgt ervoor dat de pijl niet omhoog of omlaag schuift */
+	text-align: center;
+}
+
+.arrow:hover {
+	background-color: #f28a9c; /* Lichtroze effect bij hover */
+}
+.share-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: white;
+	color: #e94870;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 2px solid white;
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+	margin-left: 1500px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.share-button:hover {
+	background-color: #f28a9c;
+	color: white;
+	border-color: #f28a9c;
+}
+.back-1 p {
+	font-size: 25px; /* Tekstgrootte voor kaart 1 */
+}
+
+.back-2 p {
+	font-size: 20px; /* Tekstgrootte voor kaart 2 */
+}
+
+.back-3 p {
+	font-size: 15px; /* Tekstgrootte voor kaart 3 */
+}

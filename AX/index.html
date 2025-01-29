@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Styleguide 1</title>
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/base-layout.css" />
-		<link rel="stylesheet" href="css/nav.css" />
-		<link rel="stylesheet" href="css/typo.css" />
-		<link rel="stylesheet" href="css/buttons.css" />
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styleguide 1</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/base-layout.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/typo.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropdown-button">SORTEREN &#9650;</button>
+      <div class="dropdown-content">
+        <a href="#">Nieuwste</a>
+        <a href="#">Evenement</a>
+        <a href="#">Ontmoeting</a>
+        <a href="#">Vrijwilligerswerk</a>
+        <a href="#">Herinneringen</a>
+      </div>
+    </div>
+    <button class="open-btn" onclick="openForm()">Deel je foto's</button>
 
-		<div class="dropdown">
-			<button class="dropdown-button">SORTEREN &#9650;</button>
-			<div class="dropdown-content">
-				<a href="#">Nieuwste</a>
-				<a href="#">Evenement</a>
-				<a href="#">Ontmoeting</a>
-				<a href="#">Vrijwilligerswerk</a>
-				<a href="#">Herinneringen</a>
-			</div>
-		</div>
-	
-	</body>
+    <div class="overlay" id="formOverlay">
+      <div class="container">
+        <button class="close-btn" onclick="closeForm()">X</button>
+        <div class="upload-box">
+          <input type="file" id="file-upload" class="file-input" />
+          <label for="file-upload" class="upload-label">
+            Selecteer een afbeelding <br />
+            (Deel jouw moment!)
+          </label>
+        </div>
+        <div class="form-box">
+          <h2>Deel jouw CMX-moment!</h2>
+          <form action="#" method="POST">
+            <textarea name="verhaal" placeholder="Jouw verhaal"></textarea>
+            <button type="submit">VERZENDEN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
