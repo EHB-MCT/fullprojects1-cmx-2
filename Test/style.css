@@ -97,7 +97,6 @@ h1::after {
 	object-fit: cover; /* Zorgt ervoor dat de afbeelding goed past */
 	display: block; /* Voorkomt rare witruimte */
 }
-
 .back {
 	position: absolute;
 	width: 100%;
@@ -113,9 +112,12 @@ h1::after {
 	box-sizing: border-box; /* Zorgt dat padding de grootte niet beïnvloedt */
 }
 .back p {
-	max-width: 80%; /* Zorgt ervoor dat de tekst niet te breed wordt */
-	font-size: 18px; /* Maak de tekst leesbaar */
-	color: white; /* Zorg dat de tekst goed contrasteert */
+	font-size: 20px; /* Pas deze waarde aan voor grotere tekst */
+	font-weight: bold; /* Maak de tekst vetter als dat beter past */
+	color: white; /* Zorgt voor contrast */
+	max-width: 80%; /* Zorgt dat de tekst niet te breed wordt */
+	text-align: center; /* Zorgt ervoor dat de tekst gecentreerd blijft */
+	line-height: 1.5; /* Voegt wat extra ruimte tussen de regels toe */
 }
 
 .flipped .inner {
@@ -178,4 +180,15 @@ h1::after {
 	background-color: #f28a9c;
 	color: white;
 	border-color: #f28a9c;
+}
+.back-1 p {
+	font-size: 25px; /* Tekstgrootte voor kaart 1 */
+}
+
+.back-2 p {
+	font-size: 20px; /* Tekstgrootte voor kaart 2 */
+}
+
+.back-3 p {
+	font-size: 15px; /* Tekstgrootte voor kaart 3 */
 }
