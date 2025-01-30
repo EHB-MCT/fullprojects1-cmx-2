@@ -102,7 +102,11 @@
 						home is in Iraq. Here, Cinemaximiliaan is my family, and we are a
 						really big family. "​
 					</p>
+					<audio controls>
+						<source src="/audio/lubnan.mp3" type="audio/mpeg" />
+					</audio>
 				</div>
+
 				<div class="story-img">
 					<img src="/images/lubnan.png" alt="Lubnan Al Wazny" />
 				</div>
@@ -126,6 +130,9 @@
 						friend of a friend. This friend connected me to Cinemaximiliaan, and
 						that’s how I ended up here."​
 					</p>
+					<audio controls>
+						<source src="/audio/Amir.mp3" type="audio/mpeg" />
+					</audio>
 				</div>
 			</div>
 			<div class="story-content">
@@ -143,6 +150,9 @@
 						producer. For me, Cinemaximiliaan is not just a place, but a
 						creative family."​
 					</p>
+					<audio controls>
+						<source src="/audio/Yüksel.mp3" type="audio/mpeg" />
+					</audio>
 				</div>
 				<div class="story-img">
 					<img src="/images/Yuksel.jpg" alt="Yüksel Cilingir" />
@@ -153,62 +163,84 @@
 		<div class="content-form">
 			<form action="#">
 				<h1>Vertel jouw verhaal</h1>
-				<div class="input">
-					<label class="label" for="voornaam">Voornaam</label><br />
-					<input class="input-box" type="text" id="voornaam" name="voornaam" />
+				<div class="input-row">
+					<div class="input">
+						<label class="label" for="voornaam">Voornaam</label><br />
+						<input
+							class="input-box"
+							type="text"
+							id="voornaam"
+							name="voornaam"
+						/>
+					</div>
+					<br />
+					<div class="input">
+						<label class="label" for="achternaam">Achternaam</label><br />
+						<input
+							class="input-box"
+							type="text"
+							id="achternaam"
+							name="achternaam"
+						/>
+					</div>
+					<br />
+
+					<br />
 				</div>
-				<br />
-				<div class="input">
-					<label class="label" for="achternaam">Achternaam</label><br />
-					<input
-						class="input-box"
-						type="text"
-						id="achternaam"
-						name="achternaam"
-					/>
+				<div class="input-row">
+					<div class="input">
+						<label class="label" for="email">E-mail</label><br />
+						<input type="email" id="email" name="email" class="input-box" />
+					</div>
+					<br />
+					<div class="input">
+						<label class="label" for="date">Date u joined</label><br />
+						<input type="date" id="date" name="date" class="input-box" />
+					</div>
+
+					<br />
+				</div>
+				<div class="input-row">
+					<div class="input">
+						<label class="label" for="categorie">Categorie</label><br />
+						<select name="categorie" id="categorie">
+							<option value="Evenement">Evenement</option>
+							<option value="ontmoeting">Ontmoeting</option>
+							<option value="vrijwilligerswerk">Vrijwilligerswerk</option>
+							<option value="herinneringen">Herinneringen</option>
+						</select>
+					</div>
+					<br />
+					<div class="input">
+						<label class="label" for="verhaal">Jouw verhaal</label><br />
+						<textarea id="verhaal" name="verhaal" rows="6" cols="50"></textarea>
+					</div>
 					<br />
 				</div>
 				<br />
-				<div class="input">
-					<label class="label" for="email">E-mail</label><br />
-					<input type="email" id="email" name="email" class="input-box" />
-				</div>
-				<br />
-				<div class="input">
-					<label class="label" for="categorie">Categorie</label><br />
-					<select name="categorie" id="categorie">
-						<option value="Evenement">Evenement</option>
-						<option value="ontmoeting">Ontmoeting</option>
-						<option value="vrijwilligerswerk">Vrijwilligerswerk</option>
-						<option value="herinneringen">Herinneringen</option>
-					</select>
-				</div>
-				<br />
-				<div class="input">
-					<label class="label" for="verhaal">Jouw verhaal</label><br />
-					<textarea id="verhaal" name="verhaal" rows="6" cols="50"></textarea>
-				</div>
-				<br />
-				<div class="label" for="myfile">Selecteer een afbeelding</div>
-				<input
-					class="input-box"
-					type="file"
-					id="myfile"
-					name="myfile"
-					multiple
-				/>
-				<br />
-				<div class="input">
-					<label class="label" for="audio">Selecteer een audiobestand</label>
-					<input
-						class="input-box"
-						type="file"
-						accept="audio/*;capture=microphone"
-					/>
-				</div>
-				<br />
-				<br />
+				<div class="input-row">
+					<div class="input">
+						<label class="label" for="myfile">Selecteer een afbeelding</label
+						><br />
+						<input
+							class="input-box"
+							type="file"
+							accept="audio/*;capture=microphone"
+						/>
+					</div>
+					<br />
 
+					<div class="input">
+						<label class="label" for="audio">Selecteer een audiobestand</label
+						><br />
+						<input
+							class="input-box"
+							type="file"
+							accept="audio/*;capture=microphone"
+						/>
+					</div>
+					<br />
+				</div>
 				<div class="buttons">
 					<button class="submit" type="submit">VERZENDEN</button>
 				</div>
