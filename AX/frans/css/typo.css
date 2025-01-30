@@ -1,0 +1,36 @@
+/* TYPOGRAPHY */
+
+/* Fonts code*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+h1 {
+	font-family: "Libre Franklin", serif;
+}
+
+h2 {
+	font-family: "Libre Franklin", serif;
+}
+
+h3 {
+	font-family: "Libre Franklin", serif;
+}
+
+h4 {
+	font-family: "Libre Franklin", serif;
+}
+
+h5 {
+	font-family: "Libre Franklin", serif;
+}
+
+h6 {
+	font-family: "Libre Franklin", serif;
+}
+
+p {
+	font-family: "Libre Franklin", serif;
+}
+
+a {
+	font-family: "Libre Franklin", serif;
+}
