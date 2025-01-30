@@ -12,18 +12,232 @@ body {
 }
 
 /*/////////////NAVIGATIE///////*/
-.nav {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
-	height: 150px;
+/*//////CODE AYMAN NAV/////////*/
+
+.nav * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.nav header {
+	background-color: #e76a7a;
+	color: #fff;
 	width: 100%;
 }
 
-.nav img {
-	width: 100%;
-	height: auto;
+.top-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+
+.brand {
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.arrow-down {
+	font-size: 0.75rem;
+	margin-left: 0.3rem;
+	color: white;
+}
+
+.right-part {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.top-nav-list {
+	display: flex;
+	gap: 2rem;
+	list-style: none;
+	font-weight: 400;
+}
+
+.top-nav-list li {
+	cursor: pointer;
+	position: relative;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #e76a7a;
+	padding: 0.5rem 1rem;
+	list-style: none;
+	z-index: 999;
+}
+
+.dropdown-menu li {
+	margin: 0.5rem 0;
+	white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.divider {
+	border: none;
+	border-top: 1px solid #fff;
+	margin: 0;
+}
+
+.bottom-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 2rem;
+}
+
+.bottom-nav-list {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	font-weight: 400;
+}
+.bottom-nav-list a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.bottom-nav-list li :hover {
+	cursor: pointer;
+}
+
+.bottom-nav-list :hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.social-and-donate {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.social-list {
+	list-style-type: none;
+	display: flex;
+	gap: 0.75rem;
+}
+
+.circle {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	border: 1.5px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.circle:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.donate-button {
+	display: inline-flex;
+	align-items: center;
+	background-color: #fff;
+	color: #e76a7a;
+	padding: 0.5rem 1.5rem;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.arrow-right {
+	margin-left: 0.5rem;
+}
+
+.donate-button:hover {
+	background-color: #f2f2f2;
+	color: #d75f6a;
+}
+
+.bottom-nav-list a li {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navwoorden {
+	text-decoration: none;
+	color: #fff;
+}
+
+.dropdown ul a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.dropdown ul a:hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.over {
+	text-decoration: none;
+	color: #fff;
+}
+.over:hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.top-nav-list a :hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+.navwoorden:hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
+}
+
+.cont {
+	text-decoration: none;
+	color: #fff;
+}
+
+.cont:hover {
+	border-radius: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: background-color 0.3s;
 }
 
 /*//////////////////////////DROPDOWN/////////////////////////////*/
@@ -516,6 +730,39 @@ h1 {
 	flex: 1;
 	width: 100%;
 	max-width: 600px;
+}
+.form-box h2 {
+	color: white;
+}
+.form-box button {
+	width: 150px;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border-radius: 80px;
+	background: #5bbca9;
+	color: white;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 10px;
+	font-weight: bold;
+}
+.form-box textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 150px;
+	font-size: 18px;
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.form-box button:hover {
+	background: #4e9b8c;
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in-out;
 }
 .close-btn {
 	position: absolute;
