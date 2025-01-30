@@ -594,3 +594,23 @@ h1 {
 		max-height: 200px;
 	}
 }
+.language-switcher {
+	position: fixed;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #5bbca9;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+.language-switcher a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 5px 0;
+}
+.language-switcher a:hover {
+	opacity: 0.8;
+}
