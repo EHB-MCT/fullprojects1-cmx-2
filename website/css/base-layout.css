@@ -528,13 +528,13 @@ audio {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		width: 95%; /* GROTER MAKEN */
+		width: 95%;
 		max-width: 600px;
 		margin: 20px auto;
 		padding: 30px;
 		border-radius: 15px;
-		min-height: 500px; /* Minimale hoogte groter maken */
-		height: auto; /* Zorgt ervoor dat het meegroeit met de tekst */
+		min-height: 500px;
+		height: auto;
 	}
 
 	.story-text {
