@@ -8,6 +8,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: 100vw;
+	font-family: "libre_franlin", sans-serif;
 }
 
 /*/////////////NAVIGATIE///////*/
@@ -23,6 +24,53 @@ body {
 .nav img {
 	width: 100%;
 	height: auto;
+}
+
+/*//////////////////////////DROPDOWN/////////////////////////////*/
+.dropdown {
+	position: relative;
+	font-family: "libre-frankline", sans-serif;
+	display: inline-block;
+	margin-left: 60%;
+}
+
+.dropdown-button {
+	background-color: #e94870;
+	color: white;
+	padding: 50px 70px;
+	font-size: 55px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	min-width: 450px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	padding: 15px 0;
+	border-radius: 10px;
+}
+
+.dropdown-content a {
+	color: #e94870;
+	padding: 15px 20px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 40px;
+}
+
+.dropdown-content a:hover {
+	background-color: rgba(200, 150, 150, 0.25);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 
 /*////////////TESTIMONIES/////////////*/
@@ -55,8 +103,12 @@ body {
 	overflow: hidden;
 	width: 70%;
 	margin-bottom: 40px;
+	transition: transform 0.4s ease-in-out;
 }
-
+.story-content:hover {
+	transform: scale(1.07);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
 .story-img {
 	flex: 1;
 	width: 50%;
@@ -67,13 +119,11 @@ body {
 .story-img img {
 	width: 100%;
 	height: 100%;
-
 	object-fit: cover;
 }
 
 .story-text {
 	flex: 1;
-
 	flex-direction: column;
 	padding: 40px;
 	background-color: #5bbca9;
@@ -107,19 +157,16 @@ body {
 .story-text p {
 	text-align: center;
 	margin: 20px 0;
-	line-height: 2.4;
-	font-size: 2rem;
-}
-
-/*////////JOUW VERHAAL FORM//////////////*/
+	line-height: 1.8;
+	font-size: 2.5rem;
+} /*////////JOUW VERHAAL FORM//////////////*/
 
 .content-form {
 	display: flex;
 	justify-content: space-between;
-	align-items: stretch;
+	align-items: center;
 	width: 100%;
-	height: 1200px;
-	margin: 40px 0;
+	height: 1300px;
 	overflow: hidden;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -130,6 +177,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	height: 100%;
 }
 
 .form-image img {
@@ -140,31 +188,80 @@ body {
 
 .content-form form {
 	flex: 1;
-	justify-content: center;
-	box-sizing: border-box;
+	max-width: 50%;
 	background: #5bbca9;
-	padding: 20px;
+	padding: 50px;
 	display: flex;
 	flex-direction: column;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.input-row {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.input-row .input {
+	flex: 1;
 }
 
 .content-form h1 {
 	font-size: 6rem;
+	margin-top: 5%;
 	color: white;
 	text-align: center;
-	margin-top: 0;
 }
-
+textarea {
+	height: 200px;
+	resize: none;
+}
 .label {
 	color: white;
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	border: none;
 }
-
+select.input-box {
+	appearance: none;
+	background: white;
+}
 .input-box {
+	width: 100%;
 	border-radius: 15px;
-	color: white;
-	padding: 5px 2px;
+	border: none;
+	outline: none;
+	padding: 15px;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	background-color: white;
 }
-
+.input-box,
+select,
+textarea {
+	width: 100%;
+	padding: 30px 2px;
+	font-size: 2rem;
+	border-radius: 35px;
+	border: 15px;
+	border: none;
+	outline: none;
+	background-color: white;
+}
+textarea {
+	height: 120px;
+	resize: none;
+}
+.input-box[type="file"] {
+	background: white;
+	padding: 10px;
+	font-size: 1.5rem;
+}
+.verhaal {
+	border: none;
+}
 .submit {
 	background: #e94870;
 	color: white;
@@ -173,10 +270,27 @@ body {
 	font-family: "libre-franklin", sans-serif;
 	font-weight: bold;
 	font-size: 50px;
-	margin-top: 10%;
+	margin-top: 2%;
 	margin-left: 36%;
+	border: none;
+	transition: transform 0.3s ease-in-out;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.submit:hover {
+	background-color: white;
+	color: #e94870;
+}
+
+/*///////AUDIO IN TESTIMONIES//////////*/
+audio {
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	margin: 20px auto;
+	transform: scale(2);
+	margin-top: 3%;
+}
 /*///////////RESPONSIVE DEEL VAN TESTIMONIES////*/
 
 @media (max-width: 768px) {
