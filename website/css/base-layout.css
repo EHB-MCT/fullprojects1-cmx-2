@@ -94,7 +94,7 @@ body {
 .story-content {
 	display: flex;
 	flex-direction: row;
-	height: 390px;
+	height: 400px;
 	justify-content: flex-start;
 	background-color: #5bbca9;
 	border-radius: 10px;
@@ -457,8 +457,7 @@ h1 {
 	cursor: pointer;
 	width: 15%;
 	font-weight: bold;
-
-	top: 4060px;
+	margin-top: 30%;
 }
 
 .open-btn:hover {
@@ -551,6 +550,7 @@ h1 {
 }
 
 .bedankt h1 {
+	color: #ec5671;
 	font-size: 32px;
 	font-weight: bold;
 	margin-bottom: 10px;
