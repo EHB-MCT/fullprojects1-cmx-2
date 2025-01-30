@@ -249,7 +249,104 @@
 				<img src="/images/foto form.png" />
 			</div>
 		</div>
+		<h1>Cinemaximiliaan in beeld</h1>
+		<hr />
+		<div class="carousel">
+			<div class="item side right" onclick="flipCard(this)">
+				<div class="inner">
+					<div class="front"><img src="/images/foto 5.jpg" Afbeelding 3 /></div>
+					<div class="back back-corner">
+						<p>
+							Onder een geïmproviseerd tentzeil brengen we cinema naar de
+							mensen, een typisch voorbeeld van onze mobiele en laagdrempelige
+							filmvertoningen.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item side" onclick="flipCard(this)">
+				<div class="inner">
+					<div class="front"><img src="/images/foto 1.jpg" Afbeelding 1 /></div>
+					<div class="back back-side">
+						<p>
+							We organiseren culturele uitstappen en workshops om de banden
+							tussen verschillende gemeenschappen te versterken en culturele
+							uitwisseling te stimuleren.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item middle" onclick="flipCard(this)">
+				<div class="inner">
+					<div class="front"><img src="/images/foto 2.jpg" Afbeelding 2 /></div>
+					<div class="back back-middle">
+						<p>
+							Cinemaximiliaan brengt mensen samen door film en cultuur. Onze
+							events bieden een plek waar nieuwkomers en locals elkaar ontmoeten
+							en verhalen delen.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item side" onclick="flipCard(this)">
+				<div class="inner">
+					<div class="front"><img src="/images/foto 3.jpg" Afbeelding 3 /></div>
+					<div class="back back-side">
+						<p>
+							Cinemaximiliaan moedigt creatieve expressie aan. Met filmworkshops
+							en producties geven we nieuwkomers een stem om hun verhalen te
+							vertellen.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="item side left" onclick="flipCard(this)">
+				<div class="inner">
+					<div class="front"><img src="/images/foto 4.jpg" Afbeelding 3 /></div>
+					<div class="back back-corner">
+						<p>
+							Bij deze openluchtfilmvertoning creëren we een warme en gezellige
+							sfeer, waar mensen samenkomen en film als verbindend element
+							ervaren.
+						</p>
+					</div>
+				</div>
+			</div>
 
+			<button class="open-btn" onclick="openForm()">DEEL JE FOTO'S</button>
+
+			<div class="overlay" id="formOverlay">
+				<div class="container">
+					<button class="close-btn" onclick="closeForm()">X</button>
+					<div class="upload-box">
+						<input type="file" id="file-upload" class="file-input" />
+						<label for="file-upload" class="upload-label">
+							Selecteer een afbeelding <br />
+							(Deel jouw moment!)
+						</label>
+					</div>
+					<div class="form-box">
+						<h2>Deel jouw CMX-moment!</h2>
+						<form action="#" method="POST">
+							<textarea name="verhaal" placeholder="Jouw verhaal..."></textarea>
+							<button type="submit">VERZENDEN</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<script>
+				function flipCard(element) {
+					element.classList.toggle("flipped");
+				}
+				function openForm() {
+					document.getElementById("formOverlay").style.display = "flex";
+				}
+
+				function closeForm() {
+					document.getElementById("formOverlay").style.display = "none";
+				}
+			</script>
+		</div>
 		<div class="footer">
 			<div class="bedankt">
 				<h1>Bedankt!</h1>
