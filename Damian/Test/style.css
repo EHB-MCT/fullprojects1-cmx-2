@@ -24,7 +24,9 @@ h1::after {
 	background-color: white; /* Witte lijnkleur */
 	margin: 10px auto 0; /* Zorgt ervoor dat de lijn gecentreerd is */
 }
-
+h2 {
+	font-size: 25px;
+}
 .carousel {
 	display: flex;
 	justify-content: center;
@@ -160,35 +162,138 @@ h1::after {
 .arrow:hover {
 	background-color: #f28a9c; /* Lichtroze effect bij hover */
 }
-.share-button {
-	display: inline-block;
-	padding: 10px 20px;
-	background-color: white;
-	color: #e94870;
-	font-size: 30px;
-	font-weight: bold;
-	text-decoration: none;
-	border-radius: 50px;
-	border: 2px solid white;
-	transition: all 0.3s ease-in-out;
-	text-align: center;
-	margin-left: 1500px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.share-button:hover {
-	background-color: #f28a9c;
-	color: white;
-	border-color: #f28a9c;
-}
-.back-1 p {
+.back-middle p {
 	font-size: 25px; /* Tekstgrootte voor kaart 1 */
 }
 
-.back-2 p {
+.back-side p {
 	font-size: 20px; /* Tekstgrootte voor kaart 2 */
 }
 
-.back-3 p {
+.back-corner p {
 	font-size: 15px; /* Tekstgrootte voor kaart 3 */
+}
+.open-btn {
+	position: absolute;
+	right: 270px;
+	bottom: 18%;
+	padding: 10px 20px;
+	background: #5bbca9;
+	color: white;
+	border: none;
+	border-radius: 80px;
+	font-size: 25px;
+	cursor: pointer;
+	width: 11%;
+	font-weight: bold;
+}
+
+.open-btn:hover {
+	background: q;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+	background: #e84c6a;
+	padding: 30px;
+	border-radius: 10px;
+	width: 900px;
+	gap: 20px;
+	position: relative;
+}
+
+.upload-box {
+	width: 250px;
+	height: 250px;
+	font-size: 18px;
+	background: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	border: 2px dashed white;
+}
+
+.upload-box .file-input {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.form-box {
+	flex: 1;
+	width: 100%; /* Zorgt ervoor dat de inhoud zich aanpast */
+	max-width: 600px; /* Pas deze waarde aan voor een bredere invoerbalk */
+}
+
+h2 {
+	color: white;
+
+	margin-bottom: 15px;
+}
+
+textarea {
+	width: 100%; /* Zorgt ervoor dat het bijna de volledige breedte van de container gebruikt */
+	max-width: 100%; /* Voorkomt dat het te breed wordt */
+	height: 150px; /* Hoogte aanpassen indien nodig */
+	font-size: 18px; /* Grotere tekst voor betere leesbaarheid */
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-sizing: border-box; /* Voorkomt dat padding de breedte vergroot */
+	resize: none;
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #5bbca9;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+button:hover {
+	background: #4e9b8c;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #5bbca9; /* Kleur van de cirkel */
+	color: white;
+	border: none;
+	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
+	width: 40px; /* Groter maken als nodig */
+	height: 40px;
+	font-size: 20px; /* Grootte van de "X" */
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.close-btn:hover {
+	background: #4e9b8c;
 }
