@@ -1,31 +1,32 @@
 body {
-	font-family: Libre Franklin;
+	font-family: Libre Franklin, sans-serif;
 	background-color: #e94870;
 	text-align: center;
 	margin: 0;
 	padding: 0;
+	height: 100;
 }
 h1 {
-	font-size: 80px; /* Maak de tekst groter */
-	font-weight: 700; /* Maak de tekst dikker */
-	color: white; /* Witte tekstkleur */
+	font-size: 50px;
+	font-weight: bold;
+	color: white;
 	text-align: center;
-	position: relative; /* Nodig voor de lijn */
-	display: inline-block; /* Zorgt ervoor dat de onderlijn niet over de hele breedte gaat */
-	padding-bottom: 5px; /* Ruimte tussen de tekst en de lijn */
-	margin-top: 100px;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 5px;
+	margin-top: 50px;
 }
 
 h1::after {
-	content: ""; /* Zorgt dat er een lijn verschijnt */
+	content: "";
 	display: block;
-	width: 1000px; /* Breedte van de lijn, pas aan naar wens */
-	height: 5px; /* Dikte van de lijn */
-	background-color: white; /* Witte lijnkleur */
-	margin: 10px auto 0; /* Zorgt ervoor dat de lijn gecentreerd is */
+	width: 700px;
+	height: 5px;
+	background-color: white;
+	margin: 10px auto 0;
 }
 h2 {
-	font-size: 25px;
+	font-size: 20px;
 }
 .carousel {
 	display: flex;
@@ -47,24 +48,24 @@ h2 {
 	transition: transform 0.3s ease-in-out;
 }
 .item.middle {
-	width: 450px;
-	height: 450px;
-	transition: transform 0.3s ease-in-out;
-}
-.item.side {
 	width: 350px;
 	height: 350px;
 	transition: transform 0.3s ease-in-out;
 }
-.item.side.right {
+.item.side {
 	width: 250px;
 	height: 250px;
+	transition: transform 0.3s ease-in-out;
+}
+.item.side.right {
+	width: 150px;
+	height: 150px;
 	margin-left: auto;
 	transition: transform 0.3s ease-in-out;
 }
 .item.side.left {
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	margin-right: auto;
 	transition: transform 0.3s ease-in-out;
 }
@@ -88,7 +89,7 @@ h2 {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	backface-visibility: hidden; /* Voorkant blijft zichtbaar */
+	backface-visibility: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -96,8 +97,8 @@ h2 {
 .front img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover; /* Zorgt ervoor dat de afbeelding goed past */
-	display: block; /* Voorkomt rare witruimte */
+	object-fit: cover;
+	display: block;
 }
 .back {
 	position: absolute;
@@ -105,86 +106,87 @@ h2 {
 	height: 100%;
 	backface-visibility: hidden;
 	transform: rotateY(180deg);
-	background-color: #5bbca9; /* Zorgt ervoor dat de achterkant niet transparant is */
+	background-color: #5bbca9;
 	display: flex;
-	align-items: center; /* Centreert verticaal */
-	justify-content: center; /* Centreert horizontaal */
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 	padding: 20px;
-	box-sizing: border-box; /* Zorgt dat padding de grootte niet beïnvloedt */
+	box-sizing: border-box;
 }
 .back p {
-	font-size: 20px; /* Pas deze waarde aan voor grotere tekst */
-	font-weight: bold; /* Maak de tekst vetter als dat beter past */
-	color: white; /* Zorgt voor contrast */
-	max-width: 80%; /* Zorgt dat de tekst niet te breed wordt */
-	text-align: center; /* Zorgt ervoor dat de tekst gecentreerd blijft */
-	line-height: 1.5; /* Voegt wat extra ruimte tussen de regels toe */
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	max-width: 80%;
+	text-align: center;
+	line-height: 1.5;
 }
 
 .flipped .inner {
-	transform: rotateY(180deg); /* Draait de kaart om bij klik */
+	transform: rotateY(180deg);
 }
 .photo-instruction {
 	display: flex;
-	align-items: center; /* Centreert de pijlen en tekst verticaal */
-	justify-content: center; /* Zorgt ervoor dat alles in het midden van de pagina blijft */
-	gap: 20px; /* Ruimte tussen de pijlen en de tekst */
-	margin-top: 30px; /* Afstand van de titel */
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 30px;
 }
 
 .photo-instruction p {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: bold;
 	color: white;
 	text-transform: uppercase;
 	opacity: 0.7;
-	margin: 0; /* Verwijder standaardmarges */
+	margin: 0;
 }
 
 .arrow {
-	width: 70px; /* Grootte van de cirkel */
-	height: 70px; /* Grootte van de cirkel */
+	width: 50px;
+	height: 50px;
 	background-color: white;
 	color: #e94870;
-	font-size: 50px; /* Grootte van de pijl */
+	font-size: 30px;
 	font-weight: bold;
 	display: flex;
-	align-items: center; /* Centreert de pijl verticaal */
-	justify-content: center; /* Centreert de pijl horizontaal */
-	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
 	cursor: pointer;
-	flex-shrink: 0; /* Voorkomt dat de cirkels verkleinen */
-	line-height: 5px; /* Zorgt ervoor dat de pijl niet omhoog of omlaag schuift */
+	flex-shrink: 0;
+	line-height: 5px;
 	text-align: center;
 }
 
 .arrow:hover {
-	background-color: #f28a9c; /* Lichtroze effect bij hover */
+	background-color: #f28a9c;
 }
 .back-middle p {
-	font-size: 25px; /* Tekstgrootte voor kaart 1 */
+	font-size: 18px;
 }
 
 .back-side p {
-	font-size: 20px; /* Tekstgrootte voor kaart 2 */
+	font-size: 13px;
 }
 
 .back-corner p {
-	font-size: 15px; /* Tekstgrootte voor kaart 3 */
+	font-size: 8px;
 }
 .open-btn {
 	position: absolute;
-	right: 270px;
-	bottom: 18%;
+	align-items: center;
+	right: 120px;
+	bottom: 5px;
 	padding: 10px 20px;
 	background: #5bbca9;
 	color: white;
 	border: none;
 	border-radius: 80px;
-	font-size: 25px;
+	font-size: 20px;
 	cursor: pointer;
-	width: 11%;
+	width: 15%;
 	font-weight: bold;
 }
 
@@ -228,6 +230,7 @@ h2 {
 	cursor: pointer;
 	position: relative;
 	border: 2px dashed white;
+	margin-bottom: 10px;
 }
 
 .upload-box .file-input {
@@ -240,38 +243,39 @@ h2 {
 
 .form-box {
 	flex: 1;
-	width: 100%; /* Zorgt ervoor dat de inhoud zich aanpast */
-	max-width: 600px; /* Pas deze waarde aan voor een bredere invoerbalk */
+	width: 100%;
+	max-width: 600px;
 }
 
 h2 {
 	color: white;
-
 	margin-bottom: 15px;
 }
 
 textarea {
-	width: 100%; /* Zorgt ervoor dat het bijna de volledige breedte van de container gebruikt */
-	max-width: 100%; /* Voorkomt dat het te breed wordt */
-	height: 150px; /* Hoogte aanpassen indien nodig */
-	font-size: 18px; /* Grotere tekst voor betere leesbaarheid */
+	width: 100%;
+	max-width: 100%;
+	height: 150px;
+	font-size: 18px;
 	padding: 10px;
 	border: 1px solid white;
 	border-radius: 5px;
-	box-sizing: border-box; /* Voorkomt dat padding de breedte vergroot */
+	box-sizing: border-box;
 	resize: none;
 }
 
 button {
-	width: 100%;
+	width: 150px;
+	height: 40px;
 	padding: 10px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 80px;
 	background: #5bbca9;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	cursor: pointer;
 	margin-top: 10px;
+	font-weight: bold;
 }
 
 button:hover {
@@ -282,13 +286,13 @@ button:hover {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	background: #5bbca9; /* Kleur van de cirkel */
+	background: #5bbca9;
 	color: white;
 	border: none;
-	border-radius: 50%; /* Zorgt voor een perfecte cirkel */
-	width: 40px; /* Groter maken als nodig */
+	border-radius: 50%;
+	width: 40px;
 	height: 40px;
-	font-size: 20px; /* Grootte van de "X" */
+	font-size: 20px;
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
